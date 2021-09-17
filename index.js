@@ -1,8 +1,10 @@
 /////////////////////////////////////////////////////////////// Coisas para nao mudar///////////////////////////////////////////
+
+require('http').createServer().listen(3000)
 const discord = require("discord.js");
 const bot = new discord.Client();
 const fetch = require("node-fetch")
-const token = 'ODY0NTU1MDg0MTAwNzk2NDM2.YO3Jqg.AIico-OYwqyOOp4LBOlLH8hH-Ro'
+const token = 'ODY0NTU1MDg0MTAwNzk2NDM2.YO3Jqg.9zZC5QM2nEw2MoGzptfklYyJjAY'
 const ytdl = require("ytdl-core");
 const streamOptions = {seek: 0 , volume:1};
 var isLoop = false;
@@ -200,6 +202,7 @@ else if(commands.some(word => upper.includes(word))){
 
   })
 
+  bot.login(process.env.TOKEN)
   /*VoiceChannels.join()
   .then(connection =>{
       const stream = ytdl(youtubeLink, {filter: 'audioonly'});
